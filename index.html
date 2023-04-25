@@ -13,7 +13,7 @@
                         margin: 30px 23px 20px;
                 }
 
-                img
+                .img
                 {
                         height: 200px;
                         margin: auto;
@@ -28,8 +28,17 @@
 <body>
         <!-- Our nav needs to have a logo that you can click on to return to home page -->
         <nav>
-                <p class="company"><a href="https://kprou.github.io/FItnessCS20/"><STRONG> S.M.E.K. Fitness Group </STRONG></a></p>
-                <p class="slogan">Strength, Movement, Exercise, and Kinesiology</p>
+                <table>
+                        <tr>
+                                <td class="side"><a href="https://kprou.github.io/FItnessCS20/"><img class="logo" src="smek_logo.png"></a></td>
+                                <td class="middle">
+                                        <p class="company"><STRONG> S.M.E.K. Fitness Group </STRONG></p>
+                                        <p class="slogan">Strength, Movement, Exercise, and Kinesiology</p>
+                                </td>
+                                <td class="side">&nbsp</td>
+                        </tr>
+                </table>
+
                 <ul>
                         <li><a href="athletes.html"> College Athletes </a></li>
                         <li><a href="subscriptions.html"> Sign Up </a></li>
@@ -54,17 +63,17 @@
         </p>
 
         <figure>
-                <img src="dumbbells.jpg"/><br>
+                <img class="img" src="dumbbells.jpg"/><br>
                 Some of our free weights
         </figure>
 
         <figure>
-                <img src="rack_treadmills.jpg"/><br>
+                <img class="img" src="rack_treadmills.jpg"/><br>
                 Treadmills and more free weights
         </figure>
 
         <figure>
-                <img src="ropes_turf.jpg"/><br>
+                <img class="img" src="ropes_turf.jpg"/><br>
                 Our turf area
         </figure>
 

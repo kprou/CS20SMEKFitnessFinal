@@ -2,29 +2,43 @@ nav
 {
         position: fixed;
         top: 0;
-        left: 0;
         width: 100%;
         background-color: #000;
         color: #ccc;
         padding: 10px;
 }
 
+table 
+{
+        width: 100%;
+}
+
+.middle
+{
+        width: 50%;
+}
+
+.side
+{
+        width: 25%
+}
+
+.logo
+{
+        width: 200px;
+}
+
 .company
 {
         font-size: 40px;
+        text-align: center;
         margin: 0;
-        text-align: left;
-}
-
-.company a 
-{
-        text-decoration: none;
-        color: #555
 }
 
 .slogan
 {
-        font-size: 30px;
+        font-size: 25px;
+        color: #555;
         text-align: center;
         margin: 0;
 }
@@ -44,7 +58,7 @@ nav li
 nav li a
 {
         display: block;
-        color: #777;
+        color: #ccc;
         text-align: center;
         padding: 10px 20px;
         text-decoration: none;
@@ -52,8 +66,8 @@ nav li a
 
 nav li a:hover
 {
-        background-color: #333;
         color: #fff;
+        background-color: #333;
 }
 
 body
