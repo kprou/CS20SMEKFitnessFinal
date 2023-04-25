@@ -1,0 +1,92 @@
+nav
+{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        color: #ccc;
+        padding: 10px;
+}
+
+.company
+{
+        font-size: 40px;
+        margin: 0;
+        text-align: left;
+}
+
+.company a 
+{
+        text-decoration: none;
+        color: #555
+}
+
+.slogan
+{
+        font-size: 30px;
+        text-align: center;
+        margin: 0;
+}
+
+nav ul
+{
+        list-style-type: none;
+        margin: 0;
+        text-align: center;
+}
+
+nav li
+{
+        float: right;
+}
+
+nav li a
+{
+        display: block;
+        color: #777;
+        text-align: center;
+        padding: 10px 20px;
+        text-decoration: none;
+}
+
+nav li a:hover
+{
+        background-color: #333;
+        color: #fff;
+}
+
+body
+{
+        margin: 170px 0px 0px 0px; /* doesn't account for web page compression */
+        font-family: Optima, sans-serif;
+}
+
+h1,h2,h3,p
+{
+        margin-left: 40px;
+        margin-right: 40px
+}
+
+hr 
+{
+        margin: 40px;
+}
+
+footer
+{
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+}
+
+footer .stripe 
+{
+        background-color: #999;
+}
+
+footer .copyright 
+{
+        font-size: 25px;
+}
