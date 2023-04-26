@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+        <title>S.M.E.K. Fitness Group - Products</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="marquee.css">
+        <style>
+                #head1 {
+                        margin-top: 15px;
+                        text-align: center;
+                        color: whitesmoke;
+                }
+
+                .thumbnail {
+                        width: 100%;
+                }
+
+                .product-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        column-gap: 30px;
+                        row-gap: 120px;
+                }
+
+                /* responsive design */
+                @media (max-width: 600px) {
+                        .product-grid {
+                                grid-template-columns: 1fr 1fr;
+                        }
+                        .product-description, .price {
+                                font-size: 15px;
+                                color: whitesmoke;
+                        }
+                        .product-name {
+                                font-size: 20px;
+                        }
+                }
+
+                @media (max-width: 400px) {
+                        .product-grid {
+                                grid-template-columns: 1fr;
+                        }
+                }
+
+                @media (min-width: 751px) and (max-width: 999px) {
+                        .product-grid {
+                                grid-template-columns: 1fr 1fr 1fr;
+                        }
+                }
+
+                .product-info-grid {
+                        display: grid;
+                        grid-template-rows: 70px 1fr;
+                }
+
+
+                .product-name {
+                        margin-top: 0;
+                        font-size: 25px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        margin-bottom: 12px;
+                        color:aqua;
+                }
+
+                .product-description, .price {
+                        font-size: 20px;
+                        color: whitesmoke;
+                }
+
+                .thumbnail-row {
+                        margin-bottom: 12px;
+                }
+        </style>
+</head>
+<body>
+        <marquee style="border:black 3px solid; background-color: black;" direction="right;" font style="bold;" scrolldelay="10"><font size="5" face="Verdana"><font color="whitesmoke">
+                <p class="marqueeText">Sign up now for a personalized fitness program!!</p>
+        </marquee>
+
+        <nav class="navbar">
+                <div class="nav-left">
+                        <a href="#" class="nav-item">Shop</a>
+                        <a href="#" class="nav-item">Fitness Program</a>
+                        <a href="#" class="nav-item">Contact Us</a>
+                </div>
+                <div class="nav-center">
+                        <a href="#" class="nav-logo"><img src="smek-low-resolution-logo-black-on-transparent-background.png" style="height: 75px;"></a>
+                </div>
+                <div class="nav-right">
+                        <a href="#" class="nav-item">Sign Up</a>
+                        <a href="#" class="nav-item">Sign In</a>
+                        <a href="#" class="nav-item">Profile</a>
+                </div>
+        </nav>
+        
+        
+        <h2 id="head1">Products that we offer at SMEK to enhance your workouts, nutrition, and lifestyle</h2>
+        
+
+                
+        <div class="product-grid" style="padding-top: 0px;">
+          <div class="product-review">
+            <a href="https://www.amazon.com/NUTRITION-Micronized-Creatine-Monohydrate-Unflavored/dp/B002DYIZEE">
+              <div class="thumbnail-row">
+                <img class="thumbnail" src="creatine_1.jpg">
+              </div>
+              <div class="product-info-grid">
+                <div class="product-info">
+                  <p class="product-name">
+                    Micronized Creatine Powder
+                  </p>
+                  <p class="product-description">
+                    60 servings of Creatine Micronized Creatine Powder Pills.
+                    It is made from creatine monohydrate, which is a naturally occurring compound found in the body.
+                    This product is typically taken as a daily supplement, with doses ranging from 3 to 5 grams.
+                  </p>
+                  <p class="price">
+                    $30.85
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="product-review">
+            <a href="https://gorillamind.com/products/gorilla-mode">
+              <div class="thumbnail-row">
+                <img class="thumbnail" src="gorrillamode.jpg">
+              </div>
+              <div class="product-info-grid">
+                <div class="product-info">
+                  <p class="product-name">
+                    Gorilla Mode
+                  </p>
+                  <p class="product-description">
+                    40 servings of Gorilla Mode's preworkout.
+                    This supplement will give you intense focus and drive and increased endurance and power.
+                  </p>
+                  <p class="price">
+                    $49.99
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="product-review">
+            <a href="https://www.amazon.com/Fit-Simplify-Resistance-Exercise-Instruction/dp/B01AVDVHTI/ref=lp_23533915011_1_1?sbo=EO%2BcdOgoisx3waG5xqcZQA%3D%3D">
+              <div class="thumbnail-row">
+                <img class="thumbnail" src="workout_bands.jpg">
+              </div>
+              <div class="product-info-grid">
+                <div class="product-info">
+                  <p class="product-name">
+                    Workout Bands
+                  </p>
+                  <p class="product-description">
+                    Three Different Bands that range from easy, medium, and hard
+                  </p>
+                  <p class="price">
+                    $12.95
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="product-review" style="margin-bottom: 200px;">
+            <a href="https://www.amazon.com/AmazonBasics-High-Density-Roller-18-inches-Speckled/dp/B072J37MQF/ref=sr_1_5?keywords=foam+roller&qid=1678689935&sr=8-50">
+              <div class="thumbnail-row">
+                <img class="thumbnail" src="foam_roller.jpg">
+              </div>
+              <div class="product-info-grid">
+                <div class="product-info">
+                  <p class="product-name">
+                    Foam Roller
+                  </p>
+                  <p class="product-description">
+                    This product will help alleviate any tensions in your muscles. 
+                  </p>
+                  <p class="price">
+                    $12.99
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="product-review" style="margin-bottom: 200px;">
+            <a href="https://www.ebay.com/itm/204233955893?hash=item2f8d4ada35:g:bL0AAOSw-T5j3uCF&amdata=enc%3AAQAHAAAA0G20BkeGF%2FegNs8vf7vCRMmuawftniPeXJ0MNlW7z2RjrqLoaUK9agOahMob0EeUAJAPT5YL4NIv%2FQPc83K8zAiY3Ftxg1DCWCrQf64Ts7%2BoY5Y7wn2891mclnB3PW%2Bxlg6jCHnDqzBLQO07mjGQX0yERjSay3ZA%2B6RbjxBB9V8cgDTWXdSi70ZEOikE2Sejuim6f3olG7RPb2l%2BQICcKtFL3%2B3uAm%2F2vzphHwzq3L%2FNVbzy2bjluwE%2FJyw1i8qQ%2FYNCbu6W0e9IBBzm%2FOpvVsU%3D%7Ctkp%3ABk9SR9LOx5_bYQ">
+              <div class="thumbnail-row">
+                <img class="thumbnail" src="isaiah_thomas.jpg">
+              </div>
+              <div class="product-info-grid">
+                <div class="product-info">
+                  <p class="product-name">
+                    "Sweaty" Game Worn Jersey
+                  </p>
+                  <p class="product-description">
+                    Isaiah Thomas (former Boston Celtics player) -  "Sweaty" Game Worn Jersey  
+                  </p>
+                  <p class="price">
+                    $600
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        <footer>
+                <div class="stripe">&nbsp</div>
+                <img src="smek_logo.png" class="logo">
+                <div>An upper class athletic facility located on the campus of Tufts University</div>
+                <div>Medford/Somerville, MA</div>
+                <br>
+                <p>Founded by Silas Reed, Madelyn Silveira, Eric Zhao, and Kevin Prou</p>
+                <br>
+        </footer>
+</body>
+</html>
