@@ -223,39 +223,13 @@ td {
       start = 14;
     }
 
-    list.push(armExercises[start]);
-    list.push(legExercises[start]);
-    list.push(armExercises[start + 1]);
-    list.push(legExercises[start + 1]);
-    list.push(coreExercises[start]);
-    list.push(cardioExercises[start]);
-
-    start += 3;
-
-    list.push(armExercises[start]);
-    list.push(legExercises[start]);
-    list.push(armExercises[start + 1]);
-    list.push(legExercises[start + 1]);
-    list.push(coreExercises[start]);
-    list.push(cardioExercises[start]);
-
-    start += 3;
-
-    list.push(armExercises[start]);
-    list.push(legExercises[start]);
-    list.push(armExercises[start + 1]);
-    list.push(legExercises[start + 1]);
-    list.push(coreExercises[start]);
-    list.push(cardioExercises[start]);
-
-    start += 3;
-
-    list.push(armExercises[start]);
-    list.push(legExercises[start]);
-    list.push(armExercises[start + 1]);
-    list.push(legExercises[start + 1]);
-    list.push(coreExercises[start]);
-    list.push(cardioExercises[start]);
+    // add the excercises
+    for (let i = start; i < 22; i++) {
+      list.push(armExercises[i]);
+      list.push(legExercises[i]);
+      list.push(coreExercises[i]);
+      list.push(cardioExercises[i]);
+    }
   }
   // console.log(list);
 
