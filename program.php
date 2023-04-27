@@ -220,8 +220,35 @@ td {
      if (level == "intermediate") {
       start = 7;
     } else {
-      start = 14
+      start = 14;
     }
+
+    list.push(armExercises[start]);
+    list.push(legExercises[start]);
+    list.push(armExercises[start + 1]);
+    list.push(legExercises[start + 1]);
+    list.push(coreExercises[start]);
+    list.push(cardioExercises[start]);
+
+    start += 3;
+
+    list.push(armExercises[start]);
+    list.push(legExercises[start]);
+    list.push(armExercises[start + 1]);
+    list.push(legExercises[start + 1]);
+    list.push(coreExercises[start]);
+    list.push(cardioExercises[start]);
+
+    start += 3;
+
+    list.push(armExercises[start]);
+    list.push(legExercises[start]);
+    list.push(armExercises[start + 1]);
+    list.push(legExercises[start + 1]);
+    list.push(coreExercises[start]);
+    list.push(cardioExercises[start]);
+
+    start += 3;
 
     list.push(armExercises[start]);
     list.push(legExercises[start]);
@@ -277,16 +304,24 @@ td {
       s += "/script></div>";
     }
     s += "</div>";
-
-    // list = list.slice(2);
     console.log(s);
     document.writeln(s);
   }
   
   // create the program
+  console.log(list);
   make_week(1)
+  list = list.slice(4);
+
+  console.log(list);
   make_week(2)
+  list = list.slice(4);
+
+  console.log(list);
   make_week(3)
+  list = list.slice(4);
+  
+  console.log(list);
   make_week(4)
 
 </script>
