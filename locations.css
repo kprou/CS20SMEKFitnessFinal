@@ -1,0 +1,52 @@
+body {
+        color: whitesmoke;
+      }
+      #header {
+        display: block;
+        text-align: center;
+      
+      } 
+      
+      #subheader {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+      }
+      
+      #map {
+        z-index: 1;
+        width: 800px; 
+        height: 500px;
+        border: 2px solid aqua;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+      }
+      
+      @media (max-width: 773px) {
+        #header {
+          margin-top: 210px;
+        }
+      }
+      
+      @media (max-width: 814px) {
+        #map { 
+          width: 400px; 
+          height: 250px;
+        }
+      }
+      
+      @media (max-width: 400px) {
+        #map { 
+          width: 300px;
+          height: 150px;
+        }
+      }
+      
+      .locationWho, .locationWhere, .locationEmail {
+        text-align: left;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        color: black;
+      }
