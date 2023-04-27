@@ -9,13 +9,14 @@ a.marqueeText
         font-size: 14px;
         margin-top: 3px;
         margin-bottom: auto;
+        color:whitesmoke;
+        text-decoration: none;
 }
 
-a.marqueeText:visited
+a.marqueeText:hover
 {
-        color: whitesmoke;
-        text-decoration-line: none;
-        text-decoration: initial;
+        color: #ccc;
+        text-decoration: underline;
 }
       
 body 
@@ -44,16 +45,6 @@ body
         align-items: center;
         justify-content: space-evenly;
 }
-      
-/* @media (max-width: 600px) 
-{
-        .right 
-        {
-                font-size: 18px;
-        }
-} */
-      
-
 
 /******************************************************/
 .navbar 
@@ -137,9 +128,6 @@ footer .logo
 
 .imageMainPage 
 {
-        max-width: 1280px;
-        max-height: 570px;
-
         width: 100%;
         height: auto;
 
