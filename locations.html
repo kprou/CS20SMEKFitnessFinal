@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locations</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="locations.css">
+  <link rel="stylesheet" href="marquee.css">
+  <style>
+    body { margin: 0; padding: 0; }
+  </style>
+</head>
+
+<body>
+        <marquee style="border:black 3px solid; background-color: black;" direction="right" scrolldelay="10">
+                <!-- <font size="5" face="Verdana"><font color="whitesmoke"> -->
+                <a href="FitnessProg.html" class="marqueeText">Sign up now for a personalized fitness program!!</a>
+        </marquee>
+
+        <nav class="navbar">
+                <div class="nav-left">
+                        <a href="products.html" class="nav-item">Shop</a>
+                        <a href="FitnessProg.html" class="nav-item">Fitness Program</a>
+                        <a href="locations.html" class="nav-item">Contact Us</a>
+                </div>
+                <div class="nav-center">
+                        <a href="https://kprou.github.io/CS20SMEKFitnessFinal/" class="nav-logo">
+                                <img src="smek-low-resolution-logo-black-on-transparent-background.png" style="height: 75px;">
+                        </a>
+                </div>
+                <div class="nav-right">
+                        <a href="about.html" class="nav-item">About Us</a>
+                        <a href="FitnessProg.html" class="nav-item">Sign In</a>
+                        <a href="profile.html" class="nav-item">Profile</a>
+                </div>
+        </nav>
+  
+  <h1 id="header">Locate your closest instructor and don't hesitate to email them!</h1>
+  <h2 id="subheader">Make sure to turn on your location for the map to work. Click on the blue pins on the map to find an instructor.</h2>
+  <div id="map"></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXpoYW8wNSIsImEiOiJjbGYzM3k2OHMwb2ptM3FycWxieXpzMHM3In0.mHHvvWWWyHP91rYmwpTPQg';
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [-74.5, 40], // starting position [lng, lat]
+      zoom: 14 // starting zoom
+    });
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        map.flyTo({
+          center: [position.coords.longitude, position.coords.latitude]
+        });
+
+        new mapboxgl.Marker({color: "#000000"})
+          .setLngLat([position.coords.longitude, position.coords.latitude])
+          .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(
+              `<h3 class="locationWho">Your Location</h3>`
+            )
+          )
+          .addTo(map);
+      }, function() {
+        alert('Unable to get your location');
+      });
+    } else {
+      alert('Geolocation is not supported by your browser');
+    }
+
+    var marker2 = new mapboxgl.Marker()
+      .setLngLat([-71.121943, 42.404342])
+      .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(
+              `<h3 class="locationWho">Instructor Kevin's location</h3>
+              <h5 class="locationWhere">Haskell Hall 310</h5>
+              <h5 class="locationEmail">kevin.prou@tufts.edu</h5>`
+            )
+          )
+      .addTo(map);
+
+    var marker3 = new mapboxgl.Marker()
+      .setLngLat([-71.11676, 42.40274])
+      .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(
+              `<h3 class="locationWho">Instructor Silas's location</h3>
+              <h5 class="locationWhere">165 College Ave, Somerville</h5>
+              <h5 class="locationEmail">silas.reed@tufts.edu</h5>`
+            )
+          )
+      .addTo(map);
+
+    var marker4 = new mapboxgl.Marker()
+      .setLngLat([-71.115464, 42.409031])
+      .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(
+              `<h3 class="locationWho">Instructor Maddy's location</h3>
+              <h5 class="locationWhere">Steve Tisch Sports and Fitness Center</h5>
+              <h5 class="locationEmail">madelyn.silveira@tufts.edu</h5>`
+            )
+          )
+      .addTo(map);
+
+    var marker5 = new mapboxgl.Marker()
+      .setLngLat([-71.1165466, 42.4079933])
+      .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(
+              `<h3 class="locationWho">Instructor Eric's location</h3>
+              <h5 class="locationWhere">Joyce Cummings Center</h5>
+              <h5 class="locationEmail">eric_duan_rui.zhao@tufts.edu</h5>`
+            )
+          )
+      .addTo(map);
+      
+    $(document).ready(function() {
+      $("#myButton").click(function() {
+        $("p").animate( {
+          left: "+=50",
+          height: "toggle"
+        }, 2000);
+      });
+    });
+    
+  </script>
+  
+        <footer>
+                <div class="stripe">&nbsp</div>
+                <img src="smek_logo.png" class="logo">
+                <div>An upper class athletic facility located on the campus of Tufts University</div>
+                <div>Medford/Somerville, MA</div>
+                <br>
+                <p>Founded by Silas Reed, Madelyn Silveira, Eric Zhao, and Kevin Prou</p>
+                <br>
+        </footer>
+</body>
+</html>
