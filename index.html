@@ -42,10 +42,12 @@
         </style>
 
         <script>
-                function setActionAndSubmit(form, actionUrl) {
-                        form.action = actionUrl;
-                        form.submit();
-                }
+                document.addEventListener("DOMContentLoaded", function() {
+                const buttonContainer = document.getElementById("buttonContainer");
+                buttonContainer.addEventListener("click", function(event) {
+                        window.location.href = "FitnessProg.html";
+                });
+                });
         </script>
 </head>
 <body>
@@ -76,14 +78,14 @@
                         <img src="SMEK_team.jpg" class="imageMainPage"/><br>
                 </figure>
                 <div class="overlay-buttons">
-                        <form id="subscriptionForm" method="POST">
-                        <button class="overlay-btn1" onclick="setActionAndSubmit(this.form, 'https://kprou.github.io/CS20SMEKFitnessFinal/payment1.html');">
+                        <div id="buttonContainer">
+                        <button class="overlay-btn1" onclick="setActionAndSubmit(this.form, 'FitnessProg.html');">
                                 Monthly - $14.99 USD
                         </button>
-                        <button class="overlay-btn2" onclick="setActionAndSubmit(this.form, 'https://kprou.github.io/CS20SMEKFitnessFinal/payment2.html');">
+                        <button class="overlay-btn2" onclick="setActionAndSubmit(this.form, 'FitnessProg.html');">
                                 Yearly - $89.99 USD
                         </button>
-                        </form>
+                        </div>
                 </div>
         </div>
 
