@@ -22,11 +22,35 @@
         <label for="advanced">Advanced</label>
         <br><br>
 
-        <label>Please enter your height in meters and weight rounded to the nearest pound.</label><br>
+        <label>Please enter your height rounded to the neareast inch and weight rounded to the nearest pound.</label><br>
         <label for="height">Height:</label>
-        <input type="text" id="height" name="height"><br>
+        <select id="feet" height="feet" size="1">
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+        </select>
+        <label for="feet"> feet</label>
+        
+        <select id="inches" height="inches" size="1">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+        </select>
+        <label for="inches"> inches</label>
+
         <label for="weight">Weight:</label>
         <input type="text" id="weight" name="weight"><br><br>
+        <label for="weight"> pounds</label>
 
         <label>What body parts are you most interested in working on?</label><br>
         <input type="checkbox" id="arms" name="target[]" value="arms">
