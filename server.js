@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Modify this line
 const uri = 'mongodb+srv://ezhao05:Limfs_0603@cs20freecluster.ud5in3u.mongodb.net/?retryWrites=true&w=majority';
 
 app.use(express.static(__dirname));
