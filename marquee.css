@@ -4,11 +4,18 @@ marquee
         height: 25px;
 }
       
-.marqueeText
+a.marqueeText
 {
-        font-size: 15px;
+        font-size: 14px;
         margin-top: 3px;
         margin-bottom: auto;
+}
+
+a.marqueeText:visited
+{
+        color: whitesmoke;
+        text-decoration-line: none;
+        text-decoration: initial;
 }
       
 body 
@@ -38,18 +45,16 @@ body
         justify-content: space-evenly;
 }
       
-@media (max-width: 600px) 
+/* @media (max-width: 600px) 
 {
         .right 
         {
                 font-size: 18px;
         }
-}
+} */
       
-a 
-{
-        text-decoration: none;
-}
+
+
 /******************************************************/
 .navbar 
 {
@@ -99,7 +104,7 @@ a
       
 .nav-center 
 {
-        margin-right: 60px;
+        margin-right: 74px;
 }
       
 /******************************************************/
@@ -120,4 +125,101 @@ footer .stripe
 footer .logo 
 {
         height: 112px;
+}
+
+
+/******************************************************/
+
+.imageContainerWithButton 
+{
+        position: relative;
+}
+
+.imageMainPage 
+{
+        max-width: 1280px;
+        max-height: 570px;
+
+        width: 100%;
+        height: auto;
+
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+}
+
+*, *::after, *::before {
+        box-sizing: border-box;
+}
+
+.overlay-btn1, .overlay-btn2 {
+        text-transform: uppercase;
+        position: absolute;
+        border: none;
+        transition: color 0.5s, transform 0.2s, background-color 0.2s;
+        outline: none;
+        margin: 0 10px;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 20px 5px;
+        border: 3px solid transparent;
+        background-color: transparent;
+        color: #1b1b20;
+        width: 260px;
+}
+
+.overlay-btn1:active, .overlay-btn2:active {
+        transform: translateY(3px);
+}
+
+.overlay-btn1::after, .overlay-btn1::before, 
+.overlay-btn2::after, .overlay-btn2::before {
+        border-radius: 40px;
+}
+
+.overlay-btn1:hover, .overlay-btn2:hover{
+        box-shadow: none;
+        color: whitesmoke;
+}
+.overlay-btn1::before, .overlay-btn2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 3px solid #1b1b20;
+        transition: opacity 0.3s, border 0.3s;
+}
+
+.overlay-btn1:hover::before, .overlay-btn2:hover::before{
+        opacity: 0;
+}
+
+.overlay-btn1::after, .overlay-btn2::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 3px solid #e6e6e6;
+        opacity: 0;
+        transform: scaleX(1.1) scaleY(1.3);
+        transition: transform 0.3s, opacity 0.3s;
+}
+.overlay-btn1:hover::after, .overlay-btn2:hover::after {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+}
+
+.overlay-btn1 {
+        top: 75%;
+        left: 25%;
+}
+
+.overlay-btn2 {
+        top: 75%;
+        right: 25%;
 }

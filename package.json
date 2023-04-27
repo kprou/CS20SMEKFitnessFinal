@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.3.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "cs20smekfitnessfinal-main",
+  "description": "README",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

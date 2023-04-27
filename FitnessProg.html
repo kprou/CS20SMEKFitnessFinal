@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+        <title>S.M.E.K. Fitness Group</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="marquee.css">
+        <link rel="stylesheet" href="FitnessProg.css">
+</head>
+<body>
+        <nav class="navbar">
+                <div class="nav-left">
+                        <a href="products.html" class="nav-item">Shop</a>
+                        <a href="FitnessProg.html" class="nav-item">Fitness Program</a>
+                        <a href="contact.html" class="nav-item">Contact Us</a>
+                </div>
+                <div class="nav-center">
+                        <a href="https://kprou.github.io/CS20SMEKFitnessFinal/" class="nav-logo">
+                                <img src="smek-low-resolution-logo-black-on-transparent-background.png" style="height: 75px;">
+                        </a>
+                </div>
+                <div class="nav-right">
+                        <a href="#" class="nav-item">About Us</a>
+                        <a href="#" class="nav-item">Sign In</a>
+                        <a href="#" class="nav-item">Profile</a>
+                </div>
+        </nav>
+
+        <div class="sloganContainer">
+                <h1 class="slogan">Planned workouts, exclusive instruction, private instructor, and community</h1>
+        </div>
+
+        <div class="progDescriptionContainer">
+                <h5 class="progDescription">
+                        Placeholder: semi-detailed description of what our program offers.
+                        Ideal: one to two paragraphs.
+                </h5>
+        </div>
+
+        <div class="main"> 
+		<input type="checkbox" id="chk" aria-hidden="true">
+                <div class="signup">
+                        <form id="register-form">
+                                <label for="chk" aria-hidden="true">Sign up</label>
+                                <input type="text" name="txt" placeholder="User name" required="">
+                                <input type="email" name="email" placeholder="Email" required="">
+                                <input type="password" name="pswd" placeholder="Password" required="">
+                                <button class="SignButton" type="submit">Sign up</button>
+                        </form>
+                </div>
+                <div class="login">
+                        <form id="login-form">
+                                <label for="chk" aria-hidden="true">Login</label>
+                                <input type="email" name="email" placeholder="Email" required="">
+                                <input type="password" name="pswd" placeholder="Password" required="">
+                                <button class="SignButton" type="submit">Login</button>
+                        </form>
+                </div>
+	</div>
+
+        <footer>
+                <div class="stripe">&nbsp</div>
+                <img src="smek_logo.png" class="logo">
+                <div>An upper class athletic facility located on the campus of Tufts University</div>
+                <div>Medford/Somerville, MA</div>
+                <br>
+                <p>Founded by Silas Reed, Madelyn Silveira, Eric Zhao, and Kevin Prou</p>
+                <br>
+        </footer>
+
+        <script>
+                const registerForm = document.getElementById('register-form');
+                const loginForm = document.getElementById('login-form');
+            
+                // Register form submission
+                registerForm.addEventListener('submit', (event) => {
+                        event.preventDefault();
+                        alert("here");
+                        const username = registerForm.username.value;
+                        const email = registerForm.email.value;
+                        const password = registerForm.password.value;
+                
+                        fetch('/register', {
+                                method: 'POST',
+                                headers: {
+                                        'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ username, email, password })
+                        })
+                        .then(response => response.text())
+                        .then(message => alert(message))
+                        .catch(error => console.error(error));
+                });
+            
+                // Login form submission
+                loginForm.addEventListener('submit', (event) => {
+                        event.preventDefault();
+                
+                        const username = loginForm.username.value;
+                        const password = loginForm.password.value;
+                
+                        fetch('/login', {
+                                method: 'POST',
+                                headers: {
+                                        'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ username, password })
+                        })
+                        .then(response => response.text())
+                        .then(message => alert(message))
+                        .catch(error => console.error(error));
+                });
+        </script>
+
+</body>
+</html>
