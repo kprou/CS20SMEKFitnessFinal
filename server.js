@@ -6,7 +6,10 @@ const app = express();
 const port = 3000;
 const uri = 'mongodb+srv://ezhao05:Limfs_0603@cs20freecluster.ud5in3u.mongodb.net/?retryWrites=true&w=majority';
 
+app.use(express.static(__dirname));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 app.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, 'FitnessProg.html'));
 });
@@ -19,7 +22,7 @@ app.post('/register', async (req, res) => {
     await client.connect();
     console.log("Connected to DB.");
     const collection = client.db('CS20_final').collection('users');
-    await collection.insertOne({ username, email, password });
+    await collection.insertOne({ username, password });
     res.status(200).send('Registration successful');
   } catch (err) {
     console.error(err);
